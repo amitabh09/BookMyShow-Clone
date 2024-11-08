@@ -1,21 +1,24 @@
-/*-------------------------------------------------------- Header -------------------------------------------------------- */
+/********************************************************** Global Styling *********************************************************/
 * {
     margin: 0px;
+    font-family: roboto, sans-serif !important;
 }
-header {
-    height: 60px;
+.flexRowSpacebetweenCenter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.paddingL145R120{
     padding-left: 145px;
     padding-right: 120px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
 }
-.header-part1, .header-part2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+/********************************************************** Global Styling *********************************************************/
+
+
+/*-------------------------------------------------------- Header -------------------------------------------------------- */
+header {
+    height: 60px;
 }
 .header-part1 {
     width: 690px;
@@ -32,7 +35,6 @@ header {
 }
 .header-part2 >div> select {
     font-size: 14px;
-    font-family: sans-serif;
     background-color: white;
     border: none;
 }
@@ -60,20 +62,7 @@ header {
 nav {
     height: 40px;
     background-color: rgb(245, 245, 245);
-    font-family: sans-serif !important;
     font-size: 14px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-.nav1, .nav2 {
-    padding-left: 145px;
-    padding-right: 120px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
 }
 .nav1{
     width: 370px;
@@ -82,13 +71,10 @@ nav {
     font-size: 13px;
     width: 285px;
 }
-
 /*-------------------------------------------------------- Navbar ----------------------------------------------------------- */
 
 
-        
 /*-------------------------------------------------------- Carausal -------------------------------------------------------- */
-
 .carausal {
     margin-top: 20px;
     height: 320px;
@@ -101,15 +87,8 @@ nav {
 
 
 /*-------------------------------------------------------- Section 1 -------------------------------------------------------- */
-
 .main-sec-1 {
     margin-top: 30px;
-    padding-left: 145px;
-    padding-right: 120px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
 }
 .main-sec-1>div>p {
     color: red;
@@ -118,7 +97,6 @@ nav {
 
 
 /*-------------------------------------------------------- Section 2 -------------------------------------------------------- */
-
 .main-sec-2 {
     margin-top: 10px;
     padding-left: 145px;
@@ -138,48 +116,31 @@ nav {
     height: 380px;
     border-radius: 8px;
 }
-.main-sec-2>div>h3 {
+.main-sec-2>div>h3, .main-sec-2>div>p {
     padding-top: 10px;
     word-break: break-word;
-    color: rgb(34, 34, 34);
-    font-family: sans-serif;
-    font-size: 18px;
-    font-weight: 550;
     line-height: 1.33;
 }
+.main-sec-2>div>h3 {
+    color: rgb(34, 34, 34);
+    font-size: 18px;
+    font-weight: 550;
+}
 .main-sec-2>div>p {
-    padding-top: 10px;
-    word-break: break-word;
     color: rgb(130, 125, 125);
-    font-family: sans-serif;
     font-size: 16px;
     font-weight: 450;
-    line-height: 1.33;
 }
 /*-------------------------------------------------------- Section 2 -------------------------------------------------------- */
 
 
 /*-------------------------------------------------------- Footer 1 -------------------------------------------------------- */
-
 footer {
-    font-family: roboto, sans-serif !important;
-    color: white;
     background-color: black;
 }
 .footer1 {
+    color: white;
     height: 80px;
-    padding-left: 145px;
-    padding-right: 120px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-.footer1>div {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
 }
 .footer1>div>img,.footer1>div>h3,.footer1>div>p {
     padding-right: 14px;
@@ -191,16 +152,93 @@ footer {
     padding: 8px 12px;
     font-size: 14px;
 }
-
 /*-------------------------------------------------------- Footer 1 -------------------------------------------------------- */
 
+
+/*-------------------------------------------------------- Footer 2 -------------------------------------------------------- */
 .footer2 {
     height: 100px;
-    padding-left: 145px;
-    padding-right: 120px;
     background-color: #404043;
+}
+.footer2>div>img {
+    width: 60px;
+}
+.footer2>div>p {
+    font-size: 14px;
+    color: rgb(130, 125, 125);
+}
+.footer2>div {
+    width: 200px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
 }
+/*-------------------------------------------------------- Footer 2 -------------------------------------------------------- */
+
+
+/*-------------------------------------------------------- Footer 3 -------------------------------------------------------- */
+.footer3 {
+    padding-top: 10px;
+    padding-bottom: 30px;
+    color: white;
+}
+.footer3>div {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+.footer3>h4{
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(157, 154, 154);
+    letter-spacing: 0.1px;
+}
+.footer3>div>a {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(127, 127, 127);
+    letter-spacing: 0.1px;
+    text-decoration: none;
+    margin: 0px 5px 5px 0px;
+    padding-right: 5px;
+    border-right: 1px solid rgb(127, 127, 127);
+    transition: 300ms;
+}
+.footer3>div>a:hover {
+    color: white;
+}
+/*-------------------------------------------------------- Footer 3 -------------------------------------------------------- */
+
+
+/*-------------------------------------------------------- Footer 4 -------------------------------------------------------- */
+.footer4 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    color: white;
+}
+.footer4>hr {
+    border-color: rgb(93, 93, 95);
+    width: 640px;
+}
+/*-------------------------------------------------------- Footer 4 -------------------------------------------------------- */
+
+
+/*-------------------------------------------------------- Footer 5 -------------------------------------------------------- */
+.footer6 {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+    padding-right: 80px;
+    color: rgb(127, 127, 127);
+}
+.footer6>div {
+    font-size: 11px;
+    text-align: center;
+}
+/*-------------------------------------------------------- Footer 5 -------------------------------------------------------- */
