@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+        }
+        .cont{
+            margin-left: 250px;
+            width: 1000px;
+            padding-bottom: 10px;
+            height: 300px;
+            border: 1px solid red;
+            overflow: hidden;
+        }
+        .carausal {
+            display: flex;
+            flex-direction: row;
+            
+        }
+        .carausal>img {
+            width: 1000px;
+        }
+        button {
+            padding: 10px;
+            margin-left: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <div class="carausal">
+            <img class="images" src="../images/badland.png" alt="">
+            <img class="images" src="../images/offer1.png" alt="">
+            <img class="images" src="../images/badland.png" alt="">
+            <img class="images" src="../images/offer1.png" alt="">
+        </div>
+    </div>
+    <br><br><br>
+    <button id="prev" onclick="prevf()">Prev</button>
+    <button id="next" onclick="nextf()">Next</button>
+
+    <script>
+        const arr = document.querySelectorAll(".images");
+        const carausal = document.querySelector(".carausal");
+        console.log(arr);
+        let curr_index = 0;
+        
+        function prevf() {
+            curr_index = (arr.length + curr_index - 1)%arr.length;
+            console.log(curr_index);
+            carausal.style.transform=`translate(-${curr_index*100}%)`;
+        }
+
+        function nextf() {
+            curr_index = (arr.length + curr_index + 1)%arr.length;
+            console.log(curr_index);
+            carausal.style.transform=`translate(-${curr_index*100}%)`;
+        }
+
+    </script>
+</body>
+</html>
