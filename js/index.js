@@ -14,6 +14,23 @@ function displayNavbar1(nav1Array) {
 }
 /* Navbar Code */
 
+/* Carausal */
+const carausalImages = document.querySelectorAll(".carausal_image");
+const carausal = document.querySelector(".carausal");
+let carausalIndex = 0;
+
+function prevFunction() {
+    carausalIndex = (carausalImages.length + carausalIndex - 1)%carausalImages.length;
+    carausal.style.transform = `translate(${carausalIndex*(-100)}%)`;
+    //console.log(carausalIndex);
+}
+function nextFunction() {
+    carausalIndex = (carausalImages.length + carausalIndex + 1)%carausalImages.length;
+    carausal.style.transform = `translate(${carausalIndex*(-100)}%)`;
+    //console.log(carausalIndex);
+}
+/* Carausal */
+
 
 /* Main Section 2 Code */
 const sec2Array = [
@@ -44,16 +61,118 @@ const sec2Array = [
     }
 ];
 
-document.getElementsByClassName('main-sec-2')[0].innerHTML = displaySection2(sec2Array);
+document.getElementsByClassName('main-sec-2')[0].innerHTML = displaySection(sec2Array);
+// document.getElementsByClassName('main-sec-2')[1].innerHTML = displaySection(sec2Array);
 
-function displaySection2(sec2Array) {
+function displaySection(sec2Array) {
     let str = '';
     for (let obj of sec2Array) {
         str += `<div><img src=${obj.path} alt="no image"> <h3>${obj.name}</h3> <p>${obj.genre}</p></div>`;
     }
     return str;
 }
+
 /* Main Section 2 Code */
+
+/* Main Section 4 Code */
+const sec4Array = [
+    {
+        'path': 'https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U3VuLCAxMCBOb3Y%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00403644-fvewzhbdbs-portrait.jpg',
+        'name': 'Asal Kolaar Live in ...',
+        'genre': 'Comedy/Horror'
+    },
+    {
+        'path': 'https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-VHVlLCAzIERlYw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00417872-zpdasnzjry-portrait.jpg',
+        'name': 'Maroon 5 India 2024',
+        'genre': 'Action/Drama'
+    },
+    {
+        'path': 'https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U2F0LCAyMyBOb3Y%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00410091-cneymqpeng-portrait.jpg',
+        'name': 'Shilpa Rao Live in ...',
+        'genre': 'Sci-Fi/Drama'
+    },
+    {
+        'path': 'https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-RnJpLCAyMiBOb3Y%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00411050-xrvlxdhczm-portrait.jpg',
+        'name': 'Sunburn Arena Ft. Charlotte',
+        'genre': 'Crime/Drama'
+    },
+    {
+        'path': 'https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U2F0LCAyMyBOb3Ygb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00406791-njvcryufzg-portrait.jpg',
+        'name': 'Badlands 2024 Ft. A7x ...',
+        'genre': 'Thriller/Drama'
+    }
+];
+
+document.getElementsByClassName('main-sec-4')[0].innerHTML = displaySection(sec4Array);
+
+/* Main Section 4 Code */
+
+
+/* Main Section 5 Code */
+const laughterShowsArray = [
+    {
+        'path': 'https://via.placeholder.com/300x200?text=The+Kapil+Sharma+Show', // Placeholder for "The Kapil Sharma Show"
+        'name': 'The Kapil Sharma Show',
+        'genre': 'Stand-Up/Sketch Comedy'
+    },
+    {
+        'path': 'https://via.placeholder.com/300x200?text=Comedy+Nights+with+Kapil', // Placeholder for "Comedy Nights with Kapil"
+        'name': 'Comedy Nights with Kapil',
+        'genre': 'Comedy Talk Show'
+    },
+    {
+        'path': 'https://via.placeholder.com/300x200?text=Comicstaan', // Placeholder for "Comicstaan"
+        'name': 'Comicstaan',
+        'genre': 'Stand-Up Competition'
+    },
+    {
+        'path': 'https://via.placeholder.com/300x200?text=Movers+%26+Shakers', // Placeholder for "Movers & Shakers"
+        'name': 'Movers & Shakers',
+        'genre': 'Talk Show/Comedy'
+    },
+    {
+        'path': 'https://via.placeholder.com/300x200?text=The+Great+Indian+Laughter+Challenge', // Placeholder for "The Great Indian Laughter Challenge"
+        'name': 'The Great Indian Laughter Challenge',
+        'genre': 'Stand-Up Comedy Reality Show'
+    }
+];
+
+document.getElementsByClassName('main-sec-5')[0].innerHTML = displaySection(laughterShowsArray);
+
+/* Main Section 5 Code */
+
+
+/* Main Section 6 Code */
+const popularEventsArray = [
+    {
+        'path': 'https://via.placeholder.com/300x200?text=Lollapalooza+India', // Placeholder for "Lollapalooza India"
+        'name': 'Lollapalooza India',
+        'category': 'Music Festival'
+    },
+    {
+        'path': 'https://via.placeholder.com/300x200?text=Sunburn+Festival', // Placeholder for "Sunburn Festival"
+        'name': 'Sunburn Festival',
+        'category': 'EDM Festival'
+    },
+    {
+        'path': 'https://via.placeholder.com/300x200?text=Comic+Con+India', // Placeholder for "Comic Con India"
+        'name': 'Comic Con India',
+        'category': 'Pop Culture Convention'
+    },
+    {
+        'path': 'https://via.placeholder.com/300x200?text=The+Great+Indian+Food+Festival', // Placeholder for "The Great Indian Food Festival"
+        'name': 'The Great Indian Food Festival',
+        'category': 'Food Festival'
+    },
+    {
+        'path': 'https://via.placeholder.com/300x200?text=Stand-Up+Comedy+Night', // Placeholder for "Stand-Up Comedy Night"
+        'name': 'Stand-Up Comedy Night',
+        'category': 'Comedy Show'
+    }
+];
+document.getElementsByClassName('main-sec-6')[0].innerHTML = displaySection(popularEventsArray);
+
+/* Main Section 6 Code */
 
 
 /* Footer */
