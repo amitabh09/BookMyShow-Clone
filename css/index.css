@@ -87,6 +87,7 @@ nav {
     width: 1280px;
 }
 .carausal {
+    transform: translate(-100%);
     width: 100%;
     display: flex;
     transition: 0.4s;

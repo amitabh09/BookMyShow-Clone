@@ -15,23 +15,38 @@ function displayNavbar1(nav1Array) {
 /* Navbar Code */
 
 /* Carausal */
-const carausalImages = document.querySelectorAll(".carausal_image");
-const carausal = document.querySelector(".carausal");
-let carausalIndex = 0;
+let arr = ['./images/q3.png','./images/shilpa_rao.png','./images/badland.png','./images/offer1.png','./images/q1.png','./images/q2.png'];
+printCarousel();
+
+//const carausalImages = document.querySelectorAll(".carausal_image");
+//const carausal = document.querySelector(".carausal");
+//let carausalIndex = 1;
 
 function prevFunction() {
-    carausalIndex = (carausalImages.length + carausalIndex - 1)%carausalImages.length;
-    carausal.style.transform = `translate(${carausalIndex*(-100)}%)`;
+    arr.unshift(arr.pop());
+    printCarousel();
+    //carausalIndex = (carausalImages.length + carausalIndex - 1)%carausalImages.length;
+    //carausal.style.transform = `translate(${carausalIndex*(-100)}%)`;
     //console.log(carausalIndex);
 }
 function nextFunction() {
-    carausalIndex = (carausalImages.length + carausalIndex + 1)%carausalImages.length;
-    carausal.style.transform = `translate(${carausalIndex*(-100)}%)`;
+    arr.push(arr.shift());
+    printCarousel();
+    //carausalIndex = (carausalImages.length + carausalIndex + 1)%carausalImages.length;
+    //carausal.style.transform = `translate(${carausalIndex*(-100)}%)`;
     //console.log(carausalIndex);
 }
+function printCarousel() {
+    let str='';
+    for(p of arr) {
+        str+=`<img class='carausal_image' src=${p} alt='no'>`
+    }
+    document.getElementsByClassName('carausal')[0].innerHTML=str;
+}
+
 /* Carausal */
 
-
+0
 /* Main Section 2 Code */
 const sec2Array = [
     {
